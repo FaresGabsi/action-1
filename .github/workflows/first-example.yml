@@ -12,6 +12,8 @@ jobs:
                 ls -ltra
                 cat README.md
             - name: Generate ASCII ARTWORK
-              run: cowsay -f dragon "GABESSS SEEEMHAA" >> dragon.txt
+              run: |
+                apt update && apt install cowsay
+                cowsay -f dragon "GABESSS SEEEMHAA" >> dragon.txt
 
           
